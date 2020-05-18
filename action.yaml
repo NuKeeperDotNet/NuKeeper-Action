@@ -1,0 +1,21 @@
+name: "NuKeeper"
+description: "Runs Nukeeper version checks and generates pull requests for the repository"
+author: "NuKeeper"
+inputs:
+  repository:
+    description: "Repository name with owner. For example, NuKeeperDotNet/NuKeeper"
+    default: ${{ github.repository }}
+  token:
+    description: "Personal access token (PAT) used to fetch the repository"
+    default: ${{ github.token }}
+  extra-arguments:
+    description: "Extra command arguments"
+    required: false
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - "repo"
+    - "https://github.com/"${{ inputs.repository }}
+    - ${{ inputs.token }}
+    - ${{ inputs.extra-arguments }}
