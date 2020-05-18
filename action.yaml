@@ -18,3 +18,4 @@ runs:
     - "repo"
     - ${{ format('{0}{1}', 'https://github.com/', inputs.repository) }}
     - ${{ inputs.token }}
+    - -v d
