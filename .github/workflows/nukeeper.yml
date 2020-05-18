@@ -1,0 +1,14 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Update packages
+
+on: [push]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    name: Update dependencies
+    steps:
+      - name: Nukeeper
+        id: nukeeper
+        uses: nukeeperdotnet/nukeeper-action@0.1
