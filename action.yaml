@@ -16,6 +16,5 @@ runs:
   image: "Dockerfile"
   args:
     - "repo"
-    - "https://github.com/"${{ inputs.repository }}
+    - ${{ format('{0}{1}', 'https://github.com/', inputs.repository) }}
     - ${{ inputs.token }}
-    - ${{ inputs.extra-arguments }}
