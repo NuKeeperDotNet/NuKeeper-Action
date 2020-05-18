@@ -12,3 +12,5 @@ jobs:
       - name: Nukeeper
         id: nukeeper
         uses: nukeeperdotnet/nukeeper-action@0.1
+        with:
+          token: "${{ secrets.GITHUB_TOKEN }}"
