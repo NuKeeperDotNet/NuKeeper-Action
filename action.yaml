@@ -8,9 +8,6 @@ inputs:
   token:
     description: "Personal access token (PAT) used to fetch the repository"
     default: ${{ github.token }}
-  extra-arguments:
-    description: "Extra command arguments"
-    required: false
 runs:
   using: "docker"
   image: "Dockerfile"
@@ -18,5 +15,4 @@ runs:
     - "repo"
     - ${{ format('{0}{1}', 'https://github.com/', inputs.repository) }}
     - ${{ inputs.token }}
-    - -v d
     - -f PreferSingleRepository
