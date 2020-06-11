@@ -3,14 +3,17 @@
 This action allows you to run `nukeeper` repository command for the current repository.
 
 ## Usage
-To use the action simply create an `nukeeper.yml` (or choose custom `*.yml` name) in the `.github/workflows/` directory.
+To use the action simply create a `nukeeper.yml` (or choose custom `*.yml` name) in the `.github/workflows/` directory.
 
 For example:
 
 ```yaml
 name: Update packages
 
-on: [push]
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 0 * * 0'
 
 jobs:
   update:
