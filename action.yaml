@@ -1,4 +1,4 @@
-name: "NuKeeper"
+name: "NuKeeper Action"
 description: "Runs Nukeeper version checks and generates pull requests for the repository"
 author: "NuKeeper"
 inputs:
