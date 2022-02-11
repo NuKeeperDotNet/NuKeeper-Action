@@ -1,5 +1,7 @@
 # Nukeeper for GitHub Action
 
+Following the archival of Nukeeper (see [issue](https://github.com/NuKeeperDotNet/NuKeeper/issues/1155)), this repository is now archived as well.
+
 ## Nukeeper
 
 NuKeeper is a tool to automagically update NuGet packages in .NET projects with the supports for .NET framework and .NET Core. To find out more about Nukeeper check out the neighboring [NuKeeper](https://github.com/NuKeeperDotNet/NuKeeper) repository.
